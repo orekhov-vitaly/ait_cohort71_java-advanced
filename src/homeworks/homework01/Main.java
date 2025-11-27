@@ -21,6 +21,20 @@ public class Main {
         System.out.println("Time: " + (endTime - startTime));
     }
 
+    private static void singleThreadSolution() {
+        ThreadSum myThread = new ThreadSum(1, 1_000_000);
+
+        myThread.start();
+
+        try {
+            myThread.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println("Sum with single thread: " + myThread.getSumThread());
+    }
+
     private static void towThreadSolution() {
         ThreadSum myThread1 = new ThreadSum(1, 500_000);
         ThreadSum myThread2 = new ThreadSum(500_001, 1_000_000);
@@ -35,20 +49,6 @@ public class Main {
             throw new RuntimeException(e);
         }
 
-        System.out.println("Sum with single thread: " + (myThread1.getSumThread() + myThread2.getSumThread()));
-    }
-
-    private static void singleThreadSolution() {
-        ThreadSum myThread = new ThreadSum(1, 1_000_000);
-
-        myThread.start();
-
-        try {
-            myThread.join();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-        System.out.println("Sum with tow threads: " + myThread.getSumThread());
+        System.out.println("Sum with two threads: " + (myThread1.getSumThread() + myThread2.getSumThread()));
     }
 }
