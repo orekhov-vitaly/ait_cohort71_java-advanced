@@ -1,23 +1,23 @@
 package homeworks.homework01;
 
 public class ThreadSum extends Thread {
-    private final int rangeStart;
-    private final int rangeEnd;
+    private final long rangeStart;
+    private final long rangeEnd;
 
-    private int sumThread;
+    private long sumThread;
 
     public ThreadSum(int rangeStart, int rangeEnd) {
         this.rangeStart = rangeStart;
         this.rangeEnd = rangeEnd;
     }
 
-    public int getSumThread() {
+    public long getSumThread() {
         return sumThread;
     }
 
     @Override
     public void run() {
-        for (int i = rangeStart; i <= rangeEnd; i++) {
+        for (long i = rangeStart; i <= rangeEnd; i++) {
             sumThread+=i;
         }
     }
