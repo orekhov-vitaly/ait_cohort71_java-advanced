@@ -1,8 +1,8 @@
 package homeworks.homework01;
 
 public class ThreadSum extends Thread {
-    private final long rangeStart;
-    private final long rangeEnd;
+    private final int rangeStart;
+    private final int rangeEnd;
 
     private long sumThread;
 
@@ -17,7 +17,7 @@ public class ThreadSum extends Thread {
 
     @Override
     public void run() {
-        for (long i = rangeStart; i <= rangeEnd; i++) {
+        for (int i = rangeStart; i <= rangeEnd; i++) {
             sumThread+=i;
         }
     }

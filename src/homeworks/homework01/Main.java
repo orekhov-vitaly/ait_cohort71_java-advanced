@@ -49,6 +49,6 @@ public class Main {
             throw new RuntimeException(e);
         }
 
-        System.out.println("Sum with single thread: " + myThread.getSumThread());
+        System.out.println("Sum with tow threads: " + myThread.getSumThread());
     }
 }
