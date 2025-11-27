@@ -17,7 +17,7 @@ public class ThreadSum extends Thread {
 
     @Override
     public void run() {
-        for (int i = rangeStart; i < rangeEnd; i++) {
+        for (int i = rangeStart; i <= rangeEnd; i++) {
             sumThread+=i;
         }
     }

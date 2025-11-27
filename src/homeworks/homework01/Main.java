@@ -23,7 +23,7 @@ public class Main {
 
     private static void towThreadSolution() {
         ThreadSum myThread1 = new ThreadSum(1, 500_000);
-        ThreadSum myThread2 = new ThreadSum(500_000, 1_000_000);
+        ThreadSum myThread2 = new ThreadSum(500_001, 1_000_000);
 
         myThread1.start();
         myThread2.start();
