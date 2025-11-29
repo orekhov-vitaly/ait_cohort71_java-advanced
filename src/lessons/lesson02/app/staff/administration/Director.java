@@ -1,10 +1,14 @@
 package lessons.lesson02.app.staff.administration;
 
 import lessons.lesson02.app.staff.specialists.Secretary;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class Director {
+    @Autowired
     private ProductChief productChief;
+    @Autowired
     private SalesChief salesChief;
+    @Autowired
     private Secretary secretary;
 
     public void manageCompany() {

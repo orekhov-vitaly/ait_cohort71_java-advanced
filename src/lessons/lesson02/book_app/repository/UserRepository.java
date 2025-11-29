@@ -5,7 +5,7 @@ import lessons.lesson02.book_app.domain.User;
 
 public class UserRepository {
     public void addUser(User user) {
-        System.out.println("Пользователь добавлена");
+        System.out.println("Пользователь добавлен");
     }
 
     public void getAllUsers() {

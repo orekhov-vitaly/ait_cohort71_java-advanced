@@ -2,9 +2,12 @@ package lessons.lesson02.app.staff.administration;
 
 import lessons.lesson02.app.staff.specialists.sales.Merchandiser;
 import lessons.lesson02.app.staff.specialists.sales.SaleManager;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class SalesChief {
+    @Autowired
     private Merchandiser merchandiser;
+    @Autowired
     private SaleManager saleManager;
 
     public void giveOrders() {
